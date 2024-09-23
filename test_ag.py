@@ -26,8 +26,8 @@ def test_calif_seriacion(materias_fixture):
         {"nombre": "Física", "seriacion": [1, 0, 1], "cuatrimestre": 2, "holgura": 1},
     ]
     obtener_calif_seriacion(materias_fixture)
-    assert materias_fixture[0].calif_seriacion is not None
-    assert materias_fixture[1].calif_seriacion is not None
+    assert materias_fixture[0].calif_seriacion == 2
+    assert materias_fixture[1].calif_seriacion == 1
 
 def test_choque_materias():
     materia1 = Materia("Matemáticas", 1, "A", [8, 9], [], [8, 9], [], [])
